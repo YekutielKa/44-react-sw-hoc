@@ -52,4 +52,4 @@ const Contact = () => {
     )
 }
 
-export default withErrorPage(navNames[3].route)(Contact);
+export default Contact;

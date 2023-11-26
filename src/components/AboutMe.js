@@ -50,4 +50,4 @@ const AboutMe = ({heroId}) => {
     }
 }
 
-export default withHeroId(navNames[1].route)(AboutMe);
+export default AboutMe;

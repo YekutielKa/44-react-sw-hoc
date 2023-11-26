@@ -6,6 +6,7 @@ import Home from "./Home";
 import {navNames} from "../utils/constants";
 import {Route, Routes} from "react-router-dom";
 import ErrorPage from "./ErrorPage";
+import {withErrorPage} from "../hoc/withErrorPage";
 
 const Main = () => {
 
@@ -20,4 +21,4 @@ const Main = () => {
     )
 }
 
-export default Main;
+export default withErrorPage(Main);

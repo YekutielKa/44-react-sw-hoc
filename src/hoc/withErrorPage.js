@@ -8,11 +8,13 @@ export const withErrorPage = route => Component => props => {
     const {changeHero} = useContext(StarWarsContext);
 
     useEffect(() => {
-        if (!characters[heroId]) {
-            navigate(`/O-o-ops`)
-            return;
+        if (characters[heroId]) {
+            changeHero(heroId);
         }
-        changeHero(heroId);
+        else  {
+            navigate(`/error`)
+        }
+
     }, [heroId]);
 
     return <Component />
